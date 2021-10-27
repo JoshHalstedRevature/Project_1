@@ -1,12 +1,10 @@
 Josh Halsted
 
-For Project 1, I will be using the Google News API (along with Hive) to extract news trends about the general topic "nuclear". "Nuclear" was originally a technical term pertaining to the atom's structure, and the technologies derived from exploiting the potential energy stored in this structure. As time went on, however, we saw the term "nuclear" take on different meanings. Often, the term is coined by regular people and media to imply something explosive and destructive (the "nuclear option", "going nuclear", etc.). People in the industry claim that these alternative uses diminish public support for the commercial power industry, and have turned to pushing additional keywords to boost support for the industry.
+For Project 1, I will be using the Google News API (along with Hive) to extract news trends about the general topic "money". The timeline of the queries will include from January 20 to today. The general analysis questions will be:
 
-The questions I will ask for the analysis are limited to the USA from about ~1940 to the present, including:
-
-1) When (approximately) did alternative meanings for the term "nuclear" take hold? What is the distribution for the term "nuclear" for major media outlets (I'll only look at 5-10).
-2) Is there a correlation between the alternative uses for the word "nuclear" and public support for nuclear energy? In particular, terms like "nuclear option", "radioactivity" and "going nuclear".
-3) Is there a relative change in the number of headlines that discuss nuclear weapons and nuclear energy? Is this relative difference correlated with changing public support? Also, are the words "nuclear power" more associated with violence or peace?
-4) Have the words "passively safe" advertised for new reactor designs have any impact on support for civilian power? What about the words "reliable" or "low carbon"?
-5) How correlated were the negative news articles for the Three Mile Island, Fermi, and Browns Ferry accidents with public support?
-6) Did the Chernobyl event have a negative effect on American support for its own industry?
+1) What are the top 5 trending topics that media outlets publish about when the query "economy" is entered? What about "finance"?
+2) How have the number of mentions for "inflation" changed from the end of Q1 through Q4? Which outlets support the claim that inflation is "transitory" versus "permanent"?
+3) When did media outlets start reporting about supply chain disruptions? Which items have been mentioned as being in short supply by media outlets over the past three months?
+4) How have the number of mentions for "stock market crash" changed from the end of Q1 through Q4? 
+5) What do news outlets say today is a "hedge against inflation"?
+6) What stocks are media outlets bearish and bullish about today?
