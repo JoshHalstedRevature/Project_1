@@ -187,6 +187,8 @@ object RunApp{
         return AdminFlag
     }
 
+
+    // Test comment
     // val Login = new LoginCredentials()
     // val UserInstance = Login.LoginProcess()
     // println(UserInstance)
