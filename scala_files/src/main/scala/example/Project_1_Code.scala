@@ -75,15 +75,15 @@ object RunApp{
             throw new Exception(s"${ex.getMessage}")
         }
         } finally {
-        try {
-            if (con != null)
-            con.close();
-        } catch {
-            case ex => {
-            ex.printStackTrace();
-            throw new Exception(s"${ex.getMessage}")
+            try {
+                if (con != null)
+                con.close();
+            } catch {
+                case ex => {
+                ex.printStackTrace();
+                throw new Exception(s"${ex.getMessage}")
+                }
             }
-        }
         }
     }
 
@@ -106,25 +106,49 @@ object RunApp{
         return password
     }
 
+    def Ask2ChangePrivileges(): Unit = {
+        println("Requesting to change access privileges. Provide admin password:")
+    }
+
     def ConfirmUserLogin(user: String, password: String): Unit = {
         val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
         var con = DriverManager.getConnection(conStr, "", "");
         val stmt1 = con.createStatement()
         var sql1 = s"SELECT username FROM $HiveDBName" + "." + s"$PasswordTable WHERE username=$user";
-        println(sql1)
         try {
             var res1 = stmt1.executeQuery(sql1);
-            while (res1.next()) {
-                println("Hello there")
-                var flag = String.valueOf(res1.getString(1));
-                println(flag)
-                if(flag!="hello") {
-                    println("Need to create user")
+            println("User exists. Provide password:")
+            var UserProvidedPassword = scala.io.StdIn.readLine()
+            try {
+                val stmt3 = con.createStatement()
+                var sql3 = s"SELECT password FROM $HiveDBName" + "." + s"$PasswordTable WHERE password=$password";
+                var res3 = stmt3.executeQuery(sql3);
+                println(s"Logging in as $user")
+            } catch {
+                case e: HiveSQLException => println("Incorrect password provided. Try again:")
+                var UserProvidedPassword = scala.io.StdIn.readLine()
+                try {
+                    val stmt4 = con.createStatement()
+                    var sql4 = s"SELECT password FROM $HiveDBName" + "." + s"$PasswordTable WHERE password=$password";
+                    var res4 = stmt4.executeQuery(sql4);
+                    println(s"Logging in as $user")
+                } catch {
+                    case e: HiveSQLException => println("Incorrect password provided. Exiting program.")
                 }
             }
-        }
-        catch{
-            case e: HiveSQLException => println("This username cannot be found. Create new user with basic privileges?")
+        } catch {
+            case e: HiveSQLException => println("This username cannot be found. Create new user with basic privileges? (y/n)")
+            var UserAddInput = scala.io.StdIn.readLine()
+            if(UserAddInput == "y") {
+                println(s"Adding new user $user to $PasswordTable. Granting basic user privileges.")
+                val stmt9 = con.createStatement()
+                var sql20 = s"INSERT INTO $HiveDBName.$PasswordTable VALUES (" + "'" + user + "'" + ", " + "'" + password + "'" + ", " + "'" + "BASIC" + "'" + ")";
+                println(sql20)
+                var res50 = stmt9.executeUpdate(sql20);
+
+            }else{
+                println("Username not added. Closing program")
+            }
         }
     }
 
@@ -133,10 +157,10 @@ object RunApp{
         var con = DriverManager.getConnection(conStr, "", "");
         val stmt1 = con.createStatement()
         println(s"Determining if working database $HiveDBName exists")
-        var sql1 = "CREATE DATABASE IF NOT EXISTS " + HiveDBName;
+        var sql1 = s"CREATE DATABASE IF NOT EXISTS $HiveDBName";
         var res1 = stmt1.execute(sql1);
         val stmt2 = con.createStatement()
-        var sql2 = "USE " + HiveDBName;
+        var sql2 = s"USE $HiveDBName";
         var res2 = stmt2.execute(sql2);
     }
 
@@ -176,7 +200,7 @@ object RunApp{
             }
         }
         else{
-            println("Logging in as regular user.")
+            println("Request to grant user privileges denied.")
         }
         // val currentDirectory = new java.io.File(".").getCanonicalPath
         // println(currentDirectory)
