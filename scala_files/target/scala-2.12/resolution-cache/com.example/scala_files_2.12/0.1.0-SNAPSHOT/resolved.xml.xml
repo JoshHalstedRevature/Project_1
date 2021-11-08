@@ -4,7 +4,7 @@
 		module="scala_files_2.12"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20211102132607"
+		publication="20211107152630"
 	>
 		<description>
 		Scala_Files
@@ -33,10 +33,15 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.8" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.5" conf="test->default(compile)"/>
+		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.8" conf="test->default(compile)"/>
+		<dependency org="org.mongodb.scala" name="mongo-scala-driver_2.12" rev="2.8.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.hadoop" name="hadoop-client" rev="2.7.0" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe" name="config" rev="1.2.1" conf="compile->default(compile)"/>
 		<dependency org="org.scalaj" name="scalaj-http_2.11" rev="2.3.0" conf="compile->default(compile)"/>
 		<dependency org="org.apache.hadoop" name="hadoop-core" rev="1.2.1" conf="compile->default(compile)"/>
 		<dependency org="org.apache.hive" name="hive-jdbc" rev="2.3.5" conf="compile->default(compile)"/>
+		<dependency org="io.github.zamblauskas" name="scala-csv-parser_2.12" rev="0.13.1" conf="compile->default(compile)"/>
+		<dependency org="com.lihaoyi" name="upickle_2.12" rev="0.9.5" conf="compile->default(compile)"/>
+		<dependency org="com.lihaoyi" name="os-lib_2.12" rev="0.7.8" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
