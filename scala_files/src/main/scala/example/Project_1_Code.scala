@@ -70,6 +70,7 @@ object RunApp{
                 for (URL <- URLs){
                     var urlName = "urltable" + iterator
                     var data = getRestContent(URL)
+                    print('z')
                     var tempFileName = "URLTempFile.json"
                     var variable_name = new PrintWriter(tempFileName)
                     variable_name.write(data)
@@ -79,7 +80,8 @@ object RunApp{
                     iterator += 1 
                 }
                 var listURLTables = listBufferURLTables.toList
-                Project0Demo(listURLTables)
+                println(listURLTables)
+                Project1Demo(listURLTables)
             }
         }
     }
@@ -171,6 +173,8 @@ object RunApp{
             println("User exists. Provide password:")
             var UserProvidedPassword = scala.io.StdIn.readLine()
             try {
+                val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
+                var con = DriverManager.getConnection(conStr, "", "");
                 val stmt3 = con.createStatement()
                 var sql3 = s"SELECT password FROM $HiveDBName" + "." + s"$PasswordTable WHERE password=$password";
                 var res3 = stmt3.executeQuery(sql3);
@@ -193,13 +197,19 @@ object RunApp{
         } catch {
             case e: HiveSQLException => println("This username cannot be found. Create new user with basic privileges? (y/n)")
             var UserAddInput = scala.io.StdIn.readLine()
-            if(UserAddInput == "y") {
-                println(s"Adding new user $user to $PasswordTable. Granting basic user privileges.")
-                val stmt9 = con.createStatement()
-                var sql20 = s"INSERT INTO $HiveDBName.$PasswordTable VALUES (" + "'" + user + "'" + ", " + "'" + password + "'" + ", " + "'" + "BASIC" + "'" + ")";
-                println(sql20)
-                var res50 = stmt9.executeUpdate(sql20);
-                return "Success"
+            if((UserAddInput == "y")) {
+                println("Provide password for creating new user:")
+                var UserPasswordInput = scala.io.StdIn.readLine()
+                if (UserPasswordInput == "password") {
+                    println(s"Adding new user $user to $PasswordTable. Granting basic user privileges.")
+                    val stmt9 = con.createStatement()
+                    var sql20 = s"INSERT INTO $HiveDBName.$PasswordTable VALUES (" + "'" + user + "'" + ", " + "'" + password + "'" + ", " + "'" + "BASIC" + "'" + ")";
+                    var res50 = stmt9.executeUpdate(sql20);
+                    return "Success"
+                } else {
+                    println("Username not added. Closing program")
+                    return "Failure"
+                }
             }else{
                 println("Username not added. Closing program")
                 return "Failure"
@@ -233,7 +243,7 @@ object RunApp{
         if(AdminFlag == "Yes") {
             println("Provide administrative password:")
             var UserAdminInput = scala.io.StdIn.readLine()
-            if(UserAdminInput == "sk84trees"){
+            if(UserAdminInput == "admin"){
                 println("Confirmed as administrator")
             }
             else if(UserAdminInput != "sk84trees"){
@@ -260,15 +270,14 @@ object RunApp{
         var content = ""
         if (entity != null) {
         val inputStream = entity.getContent()
-        content = scala.io.Source.fromInputStream(inputStream).getLines.mkString
-        inputStream.close
+            content = scala.io.Source.fromInputStream(inputStream).getLines.mkString
+            inputStream.close
         }
         httpClient.getConnectionManager().shutdown()
         return content
     }
 
     def loadJSONFile2Hive(full_path: String, urlName: String): Unit = {
-        println("Function called successfully")
         val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
         var con = DriverManager.getConnection(conStr, "", "");
         val stmt85 = con.createStatement()
@@ -286,9 +295,9 @@ object RunApp{
         println(s"hdfs dfs -rm /user/hive/$full_path")
         println("When complete, press ENTER")
         scala.io.StdIn.readLine()
-            var con2 = DriverManager.getConnection(conStr, "", "");
-            val stmt88 = con2.createStatement()
-            var sql1678 = s"LOAD DATA INPATH '$full_path' INTO TABLE " + HiveDBName + s".$urlName";
+        var con2 = DriverManager.getConnection(conStr, "", "");
+        val stmt88 = con2.createStatement()
+        var sql1678 = s"LOAD DATA INPATH '$full_path' INTO TABLE " + HiveDBName + s".$urlName";
         try {
             var res69 = stmt87.execute(sql1678);
         } catch 
@@ -298,22 +307,56 @@ object RunApp{
         }
     }
 
-    def Project0Demo(tablesURL: List[String]): Unit = {
+    def Project1Demo(tablesURL: List[String]): Unit = {
         println("*********************************************************")
-        println("When I query headlines for keywords such as 'inflation', 'shortages', and 'rising prices', which news outlets do readers decide to choose? (Run three separate queries)")
-        println("First query:")
-        val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
         for (table <- tablesURL) {
-            println(s"Querying $table:")
-            var con23 = DriverManager.getConnection(conStr, "", "");
-            val stmt880 = con23.createStatement()
-            var sql5443 = "SELECT get_json_object(str,'$.articles.source.name') AS status, COUNT(*) AS COUNT FROM project_1_db." + s"$table GROUP BY get_json_object(str," + "'$.articles.source.name')";
-            var res690 = stmt880.executeQuery(sql5443);
-            while (res690.next()) {
-            System.out.println(res690.getString(1)
-        );
-      }
+            println(s"First query: Ask for number of articles that resulted:")
+            var conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
+            try {
+                var con = DriverManager.getConnection(conStr, "", "");
+                val stmt365 = con.createStatement();
+                Thread.sleep(3000)
+                var numArticleResults = stmt365.executeQuery("SELECT get_json_object(str, '$.totalArticles') FROM project_1_db." + s"$table")
+                Thread.sleep(1000)
+                while (numArticleResults.next()){
+                    println(s"The number of articles written in the past week according to the API is ${numArticleResults.getString(1)}.")
+                }
+            } catch {
+                case ex : Throwable => {
+                ex.printStackTrace();
+                println("This did not work")
+                throw new Exception (s"${ex.getMessage}")
+                }
+            } finally {
+                Thread.sleep(3000)
+                println("Press any key to see the next query.")
+                scala.io.StdIn.readLine()
+                println("*********************************************************")
+            }
+            println(s"First query: Ask for number of articles that resulted:")
+            var conStr2 = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
+            var con = DriverManager.getConnection(conStr2, "", "");
+            try { 
+                val stmt366 = con.createStatement();
+                for (rank <- 0 to 2){
+                    var rankedOutlet = stmt366.executeQuery("SELECT get_json_object(json, '$.articles.source.name[" + rank + "]') FROM project_1_db." + s"$table")
+                    while (rankedOutlet.next()){
+                        println(s"${rank + 1}: ${rankedOutlet.getString(1)}")
+                    }
+                }
+
+            } catch {
+                case ex : Throwable => {
+                ex.printStackTrace();
+                println("This did not work")
+                throw new Exception (s"${ex.getMessage}")
+                }
+            } finally{
+                    Thread.sleep(3000)
+                    println("Press any key to see the next query.")
+                    scala.io.StdIn.readLine()
+                    println("*********************************************************")
+            }
         }
-        println("*********************************************************")
     }
 }
