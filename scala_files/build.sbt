@@ -9,12 +9,16 @@ lazy val root = (project in file("."))
   .settings(
     name := "Scala_Files",
     libraryDependencies += scalaTest % Test,
-    libraryDependencies += scalaTest % Test,
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % Test,
+    libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "2.8.0",
     libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "2.7.0",
     libraryDependencies += "com.typesafe" % "config" % "1.2.1",
     libraryDependencies += "org.scalaj" % "scalaj-http_2.11" % "2.3.0",
     libraryDependencies += "org.apache.hadoop" % "hadoop-core" % "1.2.1",
-    libraryDependencies += "org.apache.hive" % "hive-jdbc" % "2.3.5"
+    libraryDependencies += "org.apache.hive" % "hive-jdbc" % "2.3.5",
+    libraryDependencies += "io.github.zamblauskas" %% "scala-csv-parser" % "0.13.1",
+    libraryDependencies += "com.lihaoyi" %% "upickle" % "0.9.5",
+    libraryDependencies += "com.lihaoyi" %% "os-lib" % "0.7.8"
   )
 
 // Uncomment the following for publishing to Sonatype.

@@ -2,8 +2,18 @@
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	example[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\classes\example[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example\Helpers$DocumentObservable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\classes\example\Helpers$DocumentObservable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example\Helpers.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\classes\example\Helpers.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example\Helpers$ImplicitObservable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\classes\example\Helpers$ImplicitObservable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example\Helpers$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\classes\example\Helpers$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	example\RunApp$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\classes\example\RunApp$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example\Helpers$GenericObservable.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\classes\example\Helpers$GenericObservable.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	example\RunApp.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\classes\example\RunApp.class[0m
 [0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

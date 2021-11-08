@@ -1,7 +1,8 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:82:22: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.[0m
 [0m[[0m[33mwarn[0m] [0m[0m                case ex => {[0m
 [0m[[0m[33mwarn[0m] [0m[0m                     ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:73:14: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.[0m
 [0m[[0m[33mwarn[0m] [0m[0m        case ex => {[0m
 [0m[[0m[33mwarn[0m] [0m[0m             ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere was one deprecation warning; re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
