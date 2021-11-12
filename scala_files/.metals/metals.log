@@ -12589,3 +12589,492 @@ Nov 08, 2021 3:27:06 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notif
 INFO: Unsupported notification method: $/setTrace
 Nov 08, 2021 3:27:25 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+[0m2021.11.08 07:08:11 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 07:08:11 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 07:08:11 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 07:08:11 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 07:08:11 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 07:08:11 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 07:08:13 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 07:08:13 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 07:08:13 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 07:08:13 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 07:08:13 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 07:08:13 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 07:09:16 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 07:09:16 INFO  time: compiled root in 0.66s[0m
+[0m2021.11.08 07:14:18 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 07:14:18 INFO  time: compiled root in 0.18s[0m
+Nov 08, 2021 7:14:21 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7761
+[0m2021.11.08 07:14:30 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 07:14:30 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 07:18:25 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 07:18:25 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 08:50:40 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 08:50:40 INFO  time: compiled root in 0.32s[0m
+[0m2021.11.08 09:02:28 WARN  no build target for: C:\Users\17577\Git_Files\project_0_files\src\main\scala\example\example\Project0ScalaCode.scala[0m
+Nov 08, 2021 9:02:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7895
+Nov 08, 2021 9:02:31 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7907
+[0m2021.11.08 09:02:32 WARN  no build target for: C:\Users\17577\Git_Files\Ajays_Files\Oct2021ScalaBatch\scalahdfs\src\main\scala\example\hfdsdemo.scala[0m
+Nov 08, 2021 9:02:33 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7923
+[0m2021.11.08 09:02:36 WARN  unsupported Scala 2.12.7[0m
+[0m2021.11.08 09:02:36 WARN  unsupported Scala 2.12.7[0m
+[0m2021.11.08 09:02:38 WARN  unsupported Scala 2.12.7[0m
+Nov 08, 2021 9:02:38 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7941
+Nov 08, 2021 9:02:38 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7947
+[0m2021.11.08 09:10:41 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:10:41 INFO  time: compiled root in 0.17s[0m
+[0m2021.11.08 09:32:02 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:32:02 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 09:34:03 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:34:03 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 09:38:56 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:38:56 INFO  time: compiled root in 0.17s[0m
+[0m2021.11.08 09:39:24 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:39:24 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 09:39:43 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:39:43 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 09:40:09 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:40:09 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 09:40:12 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:40:12 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 09:45:34 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:45:34 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 09:45:54 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:45:54 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 09:46:49 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:46:49 INFO  time: compiled root in 68ms[0m
+[0m2021.11.08 09:46:57 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:46:57 INFO  time: compiled root in 56ms[0m
+[0m2021.11.08 09:47:34 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:47:34 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 09:48:31 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:48:31 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 09:48:49 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 09:48:49 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:06:28 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:06:28 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:06:53 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:06:53 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:08:24 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:08:24 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:08:35 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:08:35 INFO  time: compiled root in 0.13s[0m
+[0m2021.11.08 10:09:11 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:09:11 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:11:30 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:11:30 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:11:34 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:11:34 INFO  time: compiled root in 0.18s[0m
+[0m2021.11.08 10:12:42 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:12:42 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:14:21 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:14:21 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:14:57 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:14:57 INFO  time: compiled root in 0.17s[0m
+[0m2021.11.08 10:15:20 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:15:20 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 10:16:13 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:16:13 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:16:59 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:16:59 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:17:18 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:17:18 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 10:22:02 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:22:02 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:23:52 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:23:52 INFO  time: compiled root in 0.14s[0m
+Nov 08, 2021 10:24:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9188
+[0m2021.11.08 10:24:32 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:24:32 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 10:28:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 10:28:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 10:28:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 10:28:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 10:28:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 10:28:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 10:28:46 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:28:46 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:30:41 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:30:41 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:30:56 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:30:56 INFO  time: compiled root in 0.19s[0m
+[0m2021.11.08 10:39:46 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:39:46 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:42:08 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:42:08 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 10:43:47 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:43:47 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 10:43:51 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:43:51 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:43:58 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:43:58 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:44:05 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:44:05 INFO  time: compiled root in 0.13s[0m
+[0m2021.11.08 10:44:20 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:44:20 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:45:27 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:45:27 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:45:37 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:45:37 INFO  time: compiled root in 0.18s[0m
+[0m2021.11.08 10:45:41 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:45:41 INFO  time: compiled root in 0.17s[0m
+[0m2021.11.08 10:45:58 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:45:58 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:46:03 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:46:03 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:46:25 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:46:25 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:47:09 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:47:09 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 10:48:43 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:48:43 INFO  time: compiled root in 0.13s[0m
+[0m2021.11.08 10:52:15 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:52:15 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 10:52:48 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:52:48 INFO  time: compiled root in 52ms[0m
+[0m2021.11.08 10:53:27 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:53:27 INFO  time: compiled root in 62ms[0m
+[0m2021.11.08 10:53:30 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:53:30 INFO  time: compiled root in 51ms[0m
+[0m2021.11.08 10:54:11 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:54:11 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 10:56:28 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:56:28 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:57:45 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:57:45 INFO  time: compiled root in 0.13s[0m
+[0m2021.11.08 10:57:57 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:57:57 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 10:59:12 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 10:59:12 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 11:00:57 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:00:57 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 11:01:06 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:01:06 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 11:04:25 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:04:25 INFO  time: compiled root in 0.17s[0m
+[0m2021.11.08 11:06:07 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:06:07 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 11:08:00 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:08:00 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 11:08:46 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 11:08:46 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 11:08:46 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 11:08:46 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 11:08:46 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 11:08:46 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 11:09:17 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:09:17 INFO  time: compiled root in 0.16s[0m
+[0m2021.11.08 11:14:38 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:14:38 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 11:19:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 11:19:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 11:19:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 11:19:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 11:19:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 11:19:29 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 11:19:35 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:19:35 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 11:21:27 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:21:27 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 11:22:00 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:22:00 INFO  time: compiled root in 0.13s[0m
+[0m2021.11.08 11:22:04 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:22:04 INFO  time: compiled root in 0.76s[0m
+[0m2021.11.08 11:24:47 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 11:24:47 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 11:24:47 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 11:24:47 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 11:24:47 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:116:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 11:24:47 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:107:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 11:24:50 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:24:50 INFO  time: compiled root in 0.15s[0m
+[0m2021.11.08 11:26:46 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:26:46 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 11:27:29 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:27:29 INFO  time: compiled root in 0.13s[0m
+[0m2021.11.08 11:28:09 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:28:09 INFO  time: compiled root in 0.18s[0m
+[0m2021.11.08 11:39:36 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 11:39:36 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:117:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 11:39:36 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:108:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 11:39:36 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:4:8: stale bloop error: object Helpers is not a member of package example.example
+import example.Helpers._
+       ^^^^^^^^^^^^^^^[0m
+[0m2021.11.08 11:39:36 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:117:22: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+                case ex => {
+                     ^^[0m
+[0m2021.11.08 11:39:36 INFO  C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala:108:14: stale bloop warning: This catches all Throwables. If this is really intended, use `case ex : Throwable` to clear this warning.
+        case ex => {
+             ^^[0m
+[0m2021.11.08 11:39:37 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.08 11:39:37 INFO  time: compiled root in 0.14s[0m
+[0m2021.11.08 20:58:33 INFO  shutting down Metals[0m
+[0m2021.11.08 20:58:33 INFO  Shut down connection with build server.[0m
+[0m2021.11.08 20:58:33 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.11.09 12:01:19 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files\scala_files' for client Visual Studio Code 1.62.0.[0m
+[0m2021.11.09 12:01:20 INFO  time: initialize in 1.45s[0m
+[0m2021.11.09 12:01:21 INFO  Attempting to connect to the build server...[0m
+[0m2021.11.09 12:01:21 INFO  skipping build import with status 'Installed'[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 16895'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m2021.11.09 12:01:25 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.11...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from 'c:\Users\17577\Git_Files\project_1_files\scala_files\.bloop'...
+[0m[32m[D][0m Loading project from 'c:\Users\17577\Git_Files\project_1_files\scala_files\.bloop\root.json'
+[0m[32m[D][0m Loading project from 'c:\Users\17577\Git_Files\project_1_files\scala_files\.bloop\root-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.8.
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\jline\jline\jars\jline-2.14.6.jar
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\bundles\scala-xml_2.12-1.0.6.jar
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.12.8.jar
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.12.8.jar
+[0m[32m[D][0m Configured Scala SemanticDB in projects 'root', 'root-test'
+[0m[32m[D][0m Missing analysis file for project 'root-test'
+[0m[32m[D][0m Loading previous analysis for 'root' from 'C:\Users\17577\Git_Files\project_1_files\scala_files\target\streams\compile\bloopAnalysisOut\$global\streams\inc_compile_2.12.zip'.
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:16895...
+The server is listening for incoming connections at tcp://127.0.0.1:16895...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.11.09 12:01:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\17577\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.11.09 12:01:29 INFO  time: code lens generation in 2.23s[0m
+[0m2021.11.09 12:01:29 INFO  time: code lens generation in 6.39s[0m
+[0m2021.11.09 12:01:29 INFO  time: code lens generation in 3.79s[0m
+[0m2021.11.09 12:01:29 INFO  time: code lens generation in 7.01s[0m
+[0m2021.11.09 12:01:29 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 42586'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:42586...
+The server is listening for incoming connections at tcp://127.0.0.1:42586...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.11.09 12:01:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\17577\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.11.09 12:01:29 INFO  time: Connected to build server in 8.07s[0m
+[0m2021.11.09 12:01:29 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.11.09 12:01:29 INFO  time: Imported build in 0.16s[0m
+[0m2021.11.09 12:01:33 INFO  time: indexed workspace in 3.79s[0m
+[0m2021.11.09 12:01:34 INFO  no build target: using presentation compiler with only scala-library: 2.12.8[0m
+[0m2021.11.09 12:04:49 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.09 12:04:51 INFO  time: compiled root in 2.46s[0m
+[0m2021.11.09 12:05:32 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.09 12:05:32 INFO  time: compiled root in 0.47s[0m
+Nov 09, 2021 6:38:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.11.10 07:12:57 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files\scala_files' for client Visual Studio Code 1.62.0.[0m
+[0m2021.11.10 07:12:58 INFO  time: initialize in 1.27s[0m
+[0m2021.11.10 07:13:03 INFO  Attempting to connect to the build server...[0m
+[0m2021.11.10 07:13:03 INFO  skipping build import with status 'Installed'[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 22021'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m2021.11.10 07:13:07 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.11...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from 'c:\Users\17577\Git_Files\project_1_files\scala_files\.bloop'...
+[0m[32m[D][0m Loading project from 'c:\Users\17577\Git_Files\project_1_files\scala_files\.bloop\root.json'
+[0m[32m[D][0m Loading project from 'c:\Users\17577\Git_Files\project_1_files\scala_files\.bloop\root-test.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.12.8.
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\jline\jline\jars\jline-2.14.6.jar
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\bundles\scala-xml_2.12-1.0.6.jar
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\org.scala-lang\scala-compiler\jars\scala-compiler-2.12.8.jar
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar
+[0m[32m[D][0m   => C:\Users\17577\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.12.8.jar
+[0m[32m[D][0m Configured Scala SemanticDB in projects 'root', 'root-test'
+[0m[32m[D][0m Missing analysis file for project 'root-test'
+[0m[32m[D][0m Loading previous analysis for 'root' from 'C:\Users\17577\Git_Files\project_1_files\scala_files\target\streams\compile\bloopAnalysisOut\$global\streams\inc_compile_2.12.zip'.
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:22021...
+The server is listening for incoming connections at tcp://127.0.0.1:22021...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.11.10 07:13:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\17577\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.11.10 07:13:09 INFO  time: code lens generation in 5.64s[0m
+[0m2021.11.10 07:13:09 INFO  time: code lens generation in 5.64s[0m
+[0m2021.11.10 07:13:09 INFO  time: code lens generation in 5.65s[0m
+[0m2021.11.10 07:13:09 INFO  time: code lens generation in 5.64s[0m
+[0m2021.11.10 07:13:09 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 28034'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:28034...
+The server is listening for incoming connections at tcp://127.0.0.1:28034...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.11.10 07:13:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\17577\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.11.10 07:13:10 INFO  time: Connected to build server in 6.83s[0m
+[0m2021.11.10 07:13:10 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.11.10 07:13:09 INFO  time: Imported build in 0.2s[0m
+[0m2021.11.10 07:13:13 INFO  time: indexed workspace in 3.31s[0m
+[0m2021.11.10 07:13:14 INFO  no build target: using presentation compiler with only scala-library: 2.12.8[0m
+[0m2021.11.10 07:13:56 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.10 07:13:59 INFO  time: compiled root in 2.54s[0m
+[0m2021.11.10 07:14:31 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.10 07:14:31 INFO  time: compiled root in 0.49s[0m
+[0m2021.11.10 08:16:48 INFO  shutting down Metals[0m
+[0m2021.11.10 08:16:48 INFO  Shut down connection with build server.[0m
+[0m2021.11.10 08:16:48 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.11.10 10:12:18 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files\scala_files' for client Visual Studio Code 1.62.1.[0m
+[0m2021.11.10 10:12:20 INFO  time: initialize in 1.24s[0m
+[0m2021.11.10 10:12:20 INFO  Attempting to connect to the build server...[0m
+[0m2021.11.10 10:12:20 INFO  skipping build import with status 'Installed'[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 29089'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:29089...
+The server is listening for incoming connections at tcp://127.0.0.1:29089...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.11.10 10:12:21 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\17577\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.11.10 10:12:21 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 35448'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:35448...
+The server is listening for incoming connections at tcp://127.0.0.1:35448...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.11.10 10:12:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\17577\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.11.10 10:12:22 INFO  time: Connected to build server in 1.56s[0m
+[0m2021.11.10 10:12:22 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.11.10 10:12:24 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.11.10 10:12:24 INFO  time: code lens generation in 3.77s[0m
+[0m2021.11.10 10:12:25 INFO  time: Imported build in 0.14s[0m
+[0m2021.11.10 10:12:26 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+Nov 10, 2021 10:12:27 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.11.10 10:12:28 INFO  time: code lens generation in 6.58s[0m
+[0m2021.11.10 10:12:28 INFO  time: code lens generation in 5.23s[0m
+[0m2021.11.10 10:12:31 INFO  time: indexed workspace in 6.02s[0m
+[0m2021.11.10 10:12:31 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.10 10:12:32 INFO  no build target: using presentation compiler with only scala-library: 2.12.8[0m
+[0m2021.11.10 10:12:32 INFO  time: compiled root in 1.5s[0m
+[0m2021.11.10 10:12:34 INFO  compiling root (2 scala sources)[0m
+[0m2021.11.10 10:12:34 INFO  time: compiled root in 0.57s[0m
+[0m2021.11.10 10:13:10 INFO  shutting down Metals[0m
+[0m2021.11.10 10:13:10 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+[0m2021.11.10 10:13:10 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+Unexpected exception when forwarding server stdin ---> client stdout
+No more data in the client stdin, exiting...
+java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/java.nio.channels.Channels$ReadableByteChannelImpl.read(Channels.java:388)
+	at bloop.launcher.bsp.BspBridge.copyContents(BspBridge.scala:289)
+	at bloop.launcher.bsp.BspBridge.forwardStreamContents(BspBridge.scala:275)
+	at bloop.launcher.bsp.BspBridge.$anonfun$wireBspConnectionStreams$2(BspBridge.scala:228)
+	at bloop.bloopgun.core.Shell$$anon$2.run(Shell.scala:156)

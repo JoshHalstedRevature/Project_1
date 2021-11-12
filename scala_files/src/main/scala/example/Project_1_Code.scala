@@ -37,12 +37,13 @@ object RunApp{
     var UserInfoFile = "UserPasswords.txt"
     val HiveDBName = "project_1_db"
     val PasswordTable = "passwordtable"
+
     def main(args: Array[String]): Unit = {
         clear()
-        println("Welcome to the trending news API!")
+        println("Welcome to the energy info API! Data is taken from the API available at the Energy Information Administration (EIA) website.")
         Thread.sleep(1000)
-        println("Please have full URLs for API queries stored in a CSV file on home/maria_dev.")
-        Thread.sleep(2000)
+        //println("Please have full URLs for API queries stored in a CSV file on home/maria_dev.")
+        //Thread.sleep(2000)
         println("Press any key to continue with the program.")
         scala.io.StdIn.readLine()
         println("Starting Hive Demo...")
@@ -53,37 +54,38 @@ object RunApp{
         CheckPasswordTableExist();
         clear()
         var instanceUser = ObtainUsername();
-        var instancePassword = ObtainPassword();
+        //var instancePassword = ObtainPassword();
         val LoginFlag = ConfirmUserLogin(instanceUser, instancePassword)
-        if (LoginFlag == "Success") {
-            clear()
-            println("Provide name of CSV file containing query URLs (this should be located in home/maria_dev)")
-            var UserProvidedCSV = scala.io.StdIn.readLine()
-            var filename = CheckFileisCSV(UserProvidedCSV)
-            if(filename == "N/A"){
-                println("File is not a CSV file. Terminating program.")
-            }
-            else{
-                var URLs = readFiletoList(filename)
-                var iterator = 1
-                var listBufferURLTables = ListBuffer[String]()
-                for (URL <- URLs){
-                    var urlName = "urltable" + iterator
-                    var data = getRestContent(URL)
-                    print('z')
-                    var tempFileName = "URLTempFile.json"
-                    var variable_name = new PrintWriter(tempFileName)
-                    variable_name.write(data)
-                    variable_name.close()
-                    loadJSONFile2Hive(tempFileName, urlName)
-                    listBufferURLTables += urlName
-                    iterator += 1 
-                }
-                var listURLTables = listBufferURLTables.toList
-                println(listURLTables)
-                Project1Demo(listURLTables)
-            }
-        }
+        println(LoginFlag) //Print LoginFlag to see if the correct flag was entered
+        // if (LoginFlag == "Success") {
+        //     clear()
+        //     println("Provide name of CSV file containing query URLs (this should be located in home/maria_dev)")
+        //     var UserProvidedCSV = scala.io.StdIn.readLine()
+        //     var filename = CheckFileisCSV(UserProvidedCSV)
+        //     if(filename == "N/A"){
+        //         println("File is not a CSV file. Terminating program.")
+        //     }
+        //     else{
+        //         var URLs = readFiletoList(filename)
+        //         var iterator = 1
+        //         var listBufferURLTables = ListBuffer[String]()
+        //         for (URL <- URLs){
+        //             var urlName = "urltable" + iterator
+        //             var data = getRestContent(URL)
+        //             print('z')
+        //             var tempFileName = "URLTempFile.json"
+        //             var variable_name = new PrintWriter(tempFileName)
+        //             variable_name.write(data)
+        //             variable_name.close()
+        //             loadJSONFile2Hive(tempFileName, urlName)
+        //             listBufferURLTables += urlName
+        //             iterator += 1 
+        //         }
+        //         var listURLTables = listBufferURLTables.toList
+        //         println(listURLTables)
+        //         Project1Demo(listURLTables)
+        //     }
+        // }
     }
 
     def clear() : Unit = {
@@ -154,7 +156,6 @@ object RunApp{
     }
 
     def ObtainPassword(): String = {
-        println("Provide password:")
         val password = scala.io.StdIn.readLine()
         return password
     }
@@ -163,13 +164,16 @@ object RunApp{
         println("Requesting to change access privileges. Provide admin password:")
     }
 
-    def ConfirmUserLogin(user: String, password: String): String = {
+    def ConfirmUserLogin(user: String): String = {
         val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
         var con = DriverManager.getConnection(conStr, "", "");
         val stmt1 = con.createStatement()
-        var sql1 = s"SELECT username FROM $HiveDBName" + "." + s"$PasswordTable WHERE username=$user";
+        var sql1 = s"SELECT username FROM $HiveDBName" + "." + s"$PasswordTable WHERE username='$user'";
         try {
             var res1 = stmt1.executeQuery(sql1);
+            while (res1.next()){
+                println(s"${res1.getString(1)}")
+            }
             println("User exists. Provide password:")
             var UserProvidedPassword = scala.io.StdIn.readLine()
             try {
