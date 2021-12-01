@@ -4647,3 +4647,283 @@ INFO: Unsupported notification method: $/setTrace
 [0m2021.11.12 12:30:54 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
 [0m2021.11.12 12:30:56 INFO  time: code lens generation in 5.1s[0m
 [0m2021.11.12 12:31:05 INFO  shutting down Metals[0m
+[0m2021.11.12 14:34:27 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files' for client Visual Studio Code 1.62.2.[0m
+[0m2021.11.12 14:34:29 INFO  time: initialize in 1.14s[0m
+[0m2021.11.12 14:34:29 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.12 14:34:29 WARN  no build tool detected in workspace 'C:\Users\17577\Git_Files\project_1_files'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.11.12 14:34:29 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.12 14:34:33 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+Nov 12, 2021 2:34:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.11.12 14:34:36 INFO  time: code lens generation in 6.05s[0m
+[0m2021.11.14 15:20:46 INFO  shutting down Metals[0m
+[0m2021.11.14 15:21:00 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files' for client Visual Studio Code 1.62.2.[0m
+[0m2021.11.14 15:21:01 INFO  time: initialize in 1.2s[0m
+[0m2021.11.14 15:21:01 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.14 15:21:01 WARN  no build tool detected in workspace 'C:\Users\17577\Git_Files\project_1_files'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.11.14 15:21:01 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.14 15:21:05 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.11.14 15:21:07 INFO  time: code lens generation in 1.14s[0m
+[0m2021.11.14 15:21:07 INFO  time: code lens generation in 5.13s[0m
+Nov 14, 2021 3:47:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.11.15 08:35:16 INFO  shutting down Metals[0m
+[0m2021.11.15 09:00:03 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files' for client Visual Studio Code 1.62.2.[0m
+[0m2021.11.15 09:00:05 INFO  time: initialize in 1.27s[0m
+[0m2021.11.15 09:00:05 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.15 09:00:05 WARN  no build tool detected in workspace 'C:\Users\17577\Git_Files\project_1_files'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.11.15 09:00:05 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.15 09:00:08 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.11.15 09:00:10 INFO  time: code lens generation in 4.47s[0m
+[0m2021.11.15 09:06:00 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.15 09:06:45 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.15 13:13:44 INFO  shutting down Metals[0m
+[0m2021.11.29 09:42:34 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.29 09:42:35 INFO  time: initialize in 1.06s[0m
+[0m2021.11.29 09:42:35 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.29 09:42:35 WARN  no build tool detected in workspace 'C:\Users\17577\Git_Files\project_1_files'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.11.29 09:42:35 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 09:42:38 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.11.29 09:42:41 INFO  time: code lens generation in 5.42s[0m
+[0m2021.11.29 09:42:41 INFO  time: code lens generation in 5.42s[0m
+[0m2021.11.29 09:52:37 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 09:54:12 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 10:29:16 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 10:50:14 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 10:50:51 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 10:55:42 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 10:55:47 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 10:57:37 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 10:57:48 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:04:12 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:05:10 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:05:32 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:06:08 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:06:18 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:06:32 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:09:11 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:09:14 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:14:55 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:23:01 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:24:06 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:24:13 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:24:24 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:24:53 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:26:28 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:29:03 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:31:46 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:31:55 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:32:05 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:32:22 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 11:53:00 INFO  shutting down Metals[0m
+[0m2021.11.29 11:53:35 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.29 11:53:36 INFO  time: initialize in 1.11s[0m
+[0m2021.11.29 11:53:37 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.29 12:00:25 INFO  shutting down Metals[0m
+java.util.concurrent.RejectedExecutionException: Task scala.concurrent.impl.CallbackRunnable@3f83e530 rejected from java.util.concurrent.ThreadPoolExecutor@3bbc7618[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 16]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2055)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:825)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1355)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$4.execute(ExecutionContextImpl.scala:138)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:42)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[0m2021.11.29 13:01:53 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files' for client Visual Studio Code 1.62.3.[0m
+[0m2021.11.29 13:01:54 INFO  time: initialize in 1.04s[0m
+[0m2021.11.29 13:01:54 WARN  Build server is not auto-connectable.[0m
+[0m2021.11.29 13:01:54 INFO  skipping build import with status 'Requested'[0m
+[0m2021.11.29 13:02:16 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:02:17 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\build.sbt[0m
+[0m2021.11.29 13:02:19 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+Nov 29, 2021 1:02:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 14
+Nov 29, 2021 1:02:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 15
+Nov 29, 2021 1:02:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 16
+[0m2021.11.29 13:02:21 INFO  time: code lens generation in 3.93s[0m
+[0m2021.11.29 13:02:21 INFO  time: code lens generation in 4.44s[0m
+[0m2021.11.29 13:02:21 INFO  time: code lens generation in 3.93s[0m
+[0m2021.11.29 13:02:21 INFO  time: code lens generation in 4.42s[0m
+[0m2021.11.29 13:18:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:18:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:18:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:18:13 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:18:13 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:18:13 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:18:28 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:20:01 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:21:33 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:21:35 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:21:43 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:22:12 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:22:14 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:22:19 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:23:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:23:17 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:23:25 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:24:29 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:24:29 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:24:39 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:24:44 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:25:38 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:25:48 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:29:06 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:29:13 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:29:52 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:29:52 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:35:54 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:36:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:43:35 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:44:47 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:44:50 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:45:26 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:45:42 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:46:31 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:46:42 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:46:51 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:47:17 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:48:12 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:49:32 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:50:53 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:51:18 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:52:03 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:52:05 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:55:48 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:56:01 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:56:44 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:56:54 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:57:53 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:58:24 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 13:58:30 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:01:41 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:02:06 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:02:25 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:02:46 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:03:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:03:05 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:04:17 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:04:29 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:05:16 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:05:18 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:05:35 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:06:05 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:07:30 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:07:31 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:07:37 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:08:22 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:08:37 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:08:59 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:09:40 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:10:01 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:10:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:10:19 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:10:46 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:11:37 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:11:43 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:12:50 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:12:55 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:13:37 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:13:47 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:14:31 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:14:36 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:16:17 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:16:28 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:16:47 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:17:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:17:10 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:17:34 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:17:51 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:17:58 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:18:38 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:19:22 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:19:43 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:21:18 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:22:09 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:22:31 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:22:55 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:22:55 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:23:01 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:23:06 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:23:43 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:23:46 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:23:58 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:23:59 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:24:59 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:26:13 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+Nov 29, 2021 2:26:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3747
+[0m2021.11.29 14:27:17 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:28:14 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:28:24 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+Exception in thread "pool-3-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[0m2021.11.29 14:34:38 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 14:34:47 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:21:26 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:21:26 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:23:23 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:23:51 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:26:30 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:26:44 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:27:00 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:28:51 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:29:10 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:29:20 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:30:49 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:32:59 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:33:18 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:33:37 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:34:48 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:35:27 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:36:39 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:36:43 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+Exception in thread "pool-3-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Nov 29, 2021 3:37:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5777
+[0m2021.11.29 15:37:45 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:37:52 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:38:10 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:39:47 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:40:29 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:40:32 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:42:53 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:43:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:43:02 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:45:50 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+Nov 29, 2021 3:47:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6279
+[0m2021.11.29 15:47:21 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:47:31 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:48:40 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:48:48 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:49:01 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:49:12 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:50:16 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:50:20 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:50:31 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:51:50 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:52:03 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:54:20 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:54:26 WARN  no build target for: C:\Users\17577\Git_Files\project_1_files\scala_files\src\main\scala\example\Project_1_Code.scala[0m
+[0m2021.11.29 15:56:19 INFO  shutting down Metals[0m

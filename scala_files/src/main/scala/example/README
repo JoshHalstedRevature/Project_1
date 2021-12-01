@@ -1,0 +1,10 @@
+
+compile
+package
+
+Go to Command Prompt (Windows + R then type "cmd"), then type:
+scp -P 2222 C:\Users\17577\Git_Files\project_1_files\scala_files\target\scala-2.12\scala_files_2.12-0.1.0-SNAPSHOT.jar maria_dev@sandbox-hdp.hortonworks.com:/home/maria_dev
+
+The Command Prompt will then ask you for maria_dev@sandbox-hdp.hortonworks.com's password.
+
+To execute the .jar file, open another session that is connected to Hortonworks (either go to browser and type in http://localhost:4200/, or open a PuTTY session and login as maria_dev) and type in:

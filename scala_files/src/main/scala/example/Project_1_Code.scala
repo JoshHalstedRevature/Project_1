@@ -6,7 +6,7 @@ import scala.util.Try
 import os._
 import java.nio.file.Paths
 import scala.sys.process._
-
+import scala.util.control.Breaks
 // Demo1.
 import java.sql.SQLException;
 import java.sql.Connection;
@@ -39,24 +39,11 @@ object RunApp{
     val PasswordTable = "passwordtable"
 
     def main(args: Array[String]): Unit = {
-        clear()
-        println("Welcome to the energy info API! Data is taken from the API available at the Energy Information Administration (EIA) website.")
-        Thread.sleep(1000)
-        //println("Please have full URLs for API queries stored in a CSV file on home/maria_dev.")
-        //Thread.sleep(2000)
-        println("Press any key to continue with the program.")
-        scala.io.StdIn.readLine()
-        println("Starting Hive Demo...")
-        Connect2Hive();
-        clear()
-        CheckHiveDBExists();
-        clear()
-        CheckPasswordTableExist();
-        clear()
-        var instanceUser = ObtainUsername();
-        //var instancePassword = ObtainPassword();
-        val LoginFlag = ConfirmUserLogin(instanceUser, instancePassword)
-        println(LoginFlag) //Print LoginFlag to see if the correct flag was entered
+        ProvideIntro()
+        HiveSetup()
+        ConfirmUsername()
+        ExecuteQueries()
+        //println(LoginFlag) //Print LoginFlag to see if the correct flag was entered
         // if (LoginFlag == "Success") {
         //     clear()
         //     println("Provide name of CSV file containing query URLs (this should be located in home/maria_dev)")
@@ -93,6 +80,25 @@ object RunApp{
             Thread.sleep(1000)
         }
 
+    def ProvideIntro(): Unit = {
+        clear()
+        println("Welcome to the energy info API! Data is taken from the API available at the Energy Information Administration (EIA) website.")
+        Thread.sleep(1000)
+        println("Press any key to continue with the program.")
+        scala.io.StdIn.readLine()
+        clear()
+    }
+
+    def HiveSetup(): Unit = {
+        println("Starting Hive Demo...")
+        Connect2Hive();
+        clear()
+        CheckHiveDBExists();
+        clear()
+        CheckPasswordTableExist();
+        clear()
+    }
+
     def Connect2Hive(): Unit = {
 
         var con: java.sql.Connection = null;
@@ -108,10 +114,10 @@ object RunApp{
         stmt.executeQuery("Show databases");
         System.out.println("show database successfully");
         } catch {
-        case ex => {
-            ex.printStackTrace();
-            throw new Exception(s"${ex.getMessage}")
-        }
+            case ex => {
+                ex.printStackTrace();
+                throw new Exception(s"${ex.getMessage}")
+            }
         } finally {
             try {
                 if (con != null)
@@ -142,83 +148,70 @@ object RunApp{
         return lines
     }
 
-    def HiveSetup(args: Array[String]): Unit = {
-        val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
-        var con = DriverManager.getConnection(conStr, "", "");
-        val stmt = con.createStatement()
-        val tableName = "testTable";
-    } 
-
     def ObtainUsername(): String = {
         println("Provide username:")
         val username = scala.io.StdIn.readLine()
         return username
     }
 
-    def ObtainPassword(): String = {
-        val password = scala.io.StdIn.readLine()
-        return password
-    }
-
     def Ask2ChangePrivileges(): Unit = {
         println("Requesting to change access privileges. Provide admin password:")
     }
 
-    def ConfirmUserLogin(user: String): String = {
+    def ConfirmUsername(): Unit = {
+        var instanceUser = ObtainUsername();
+        var sql1 = s"SELECT username FROM $HiveDBName" + "." + s"$PasswordTable WHERE username='$instanceUser'";
+        try{
+            var res1 = ExecuteHiveSQL(sql1)
+            if (res1.next()) {
+                var ConfirmedUser = res1.getString(1)
+                ConfirmPassword(ConfirmedUser)
+            }else{
+                println("Username is not found. Please contact an ADMIN user and restart program (1) or use different username (2):")
+                var response = scala.io.StdIn.readInt()
+                response match{
+                    case 1 => println("Exiting")
+                    case 2 => ConfirmUsername()
+                    case _ => println("Please select an option, 1-3")
+                }
+            }
+        }catch{
+            case e: HiveSQLException => println("You broke the program somehow. Kudos to you")
+        }
+    }
+
+    def ConfirmPassword(username: String): Unit = {
+        println("Please provide password:")
+        var UserProvidedPassword = scala.io.StdIn.readLine()
+        var sql3 = s"SELECT password FROM $HiveDBName" + "." + s"$PasswordTable WHERE username='$username'";
+        try{
+            var res3 = ExecuteHiveSQL(sql3)
+            if (res3.next()) {
+                var ConfirmedPassword = res3.getString(1)
+                if(ConfirmedPassword == UserProvidedPassword){
+                    println(s"Login successful!")
+                }else{
+                    println("Username exists in database, but password is incorrect. Try again (1), use different username (2), or exit (3)")
+                    var response = scala.io.StdIn.readInt()
+                    response match{
+                        case 1 => ConfirmPassword(username: String)
+                        case 2 => ConfirmUsername()
+                        case 3 => println("Exiting")
+                        case _ => println("Please select an option, 1-3")
+                    }
+                }
+            }
+        }catch{
+            case e: HiveSQLException => println("You broke the program somehow. Kudos to you")
+        }
+    }
+
+    def ExecuteHiveSQL(sqlStatement: String): java.sql.ResultSet = {
         val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
         var con = DriverManager.getConnection(conStr, "", "");
-        val stmt1 = con.createStatement()
-        var sql1 = s"SELECT username FROM $HiveDBName" + "." + s"$PasswordTable WHERE username='$user'";
-        try {
-            var res1 = stmt1.executeQuery(sql1);
-            while (res1.next()){
-                println(s"${res1.getString(1)}")
-            }
-            println("User exists. Provide password:")
-            var UserProvidedPassword = scala.io.StdIn.readLine()
-            try {
-                val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
-                var con = DriverManager.getConnection(conStr, "", "");
-                val stmt3 = con.createStatement()
-                var sql3 = s"SELECT password FROM $HiveDBName" + "." + s"$PasswordTable WHERE password=$password";
-                var res3 = stmt3.executeQuery(sql3);
-                println(s"Logging in as $user")
-                return "Success"
-            } catch {
-                case e: HiveSQLException => println("Incorrect password provided. Try again:")
-                var UserProvidedPassword = scala.io.StdIn.readLine()
-                try {
-                    val stmt4 = con.createStatement()
-                    var sql4 = s"SELECT password FROM $HiveDBName" + "." + s"$PasswordTable WHERE password=$password";
-                    var res4 = stmt4.executeQuery(sql4);
-                    println(s"Logging in as $user")
-                    return "Success"
-                } catch {
-                    case e: HiveSQLException => println("Incorrect password provided. Exiting program; press ENTER.")
-                    return "Failure"
-                }
-            }
-        } catch {
-            case e: HiveSQLException => println("This username cannot be found. Create new user with basic privileges? (y/n)")
-            var UserAddInput = scala.io.StdIn.readLine()
-            if((UserAddInput == "y")) {
-                println("Provide password for creating new user:")
-                var UserPasswordInput = scala.io.StdIn.readLine()
-                if (UserPasswordInput == "password") {
-                    println(s"Adding new user $user to $PasswordTable. Granting basic user privileges.")
-                    val stmt9 = con.createStatement()
-                    var sql20 = s"INSERT INTO $HiveDBName.$PasswordTable VALUES (" + "'" + user + "'" + ", " + "'" + password + "'" + ", " + "'" + "BASIC" + "'" + ")";
-                    var res50 = stmt9.executeUpdate(sql20);
-                    return "Success"
-                } else {
-                    println("Username not added. Closing program")
-                    return "Failure"
-                }
-            }else{
-                println("Username not added. Closing program")
-                return "Failure"
-            }
-        }
+        val stmt = con.createStatement()
+        var res = stmt.executeQuery(sqlStatement);
+        return res
     }
 
     def CheckHiveDBExists(): Unit = {
@@ -281,33 +274,117 @@ object RunApp{
         return content
     }
 
-    def loadJSONFile2Hive(full_path: String, urlName: String): Unit = {
-        val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
-        var con = DriverManager.getConnection(conStr, "", "");
-        val stmt85 = con.createStatement()
-        var sql975 = "DROP TABLE " + HiveDBName + s".$urlName";
-        var res65 = stmt85.execute(sql975);
-        var con8 = DriverManager.getConnection(conStr, "", "");
-        val stmt87 = con8.createStatement()
-        var sql976 = "CREATE TABLE IF NOT EXISTS " + HiveDBName + s".$urlName (str String)";
-        var res68 = stmt87.execute(sql976);
-        clear()
-        println(s"Please open another session and transfer $full_path to /user/hive/ via the command:")
-        println(s"hdfs dfs -copyFromLocal $full_path /user/hive")
-        Thread.sleep(1000)
-        println(s"If /user/hive/$full_path alread exists, delete it with:")
-        println(s"hdfs dfs -rm /user/hive/$full_path")
-        println("When complete, press ENTER")
-        scala.io.StdIn.readLine()
-        var con2 = DriverManager.getConnection(conStr, "", "");
-        val stmt88 = con2.createStatement()
-        var sql1678 = s"LOAD DATA INPATH '$full_path' INTO TABLE " + HiveDBName + s".$urlName";
-        try {
-            var res69 = stmt87.execute(sql1678);
-        } catch 
-            {
-            case e: HiveSQLException => println("File was not found in time. Moving on to next RESTful API")
-            case f: SQLException => println("File was moved to /user/hive/warehouse. Successful load.")
+    // def saveData(data: String): Unit = {
+    //     val fullFileName = "/tmp/data.json" 
+    //     val writer = new PrintWriter(new File(fullFileName))
+    //     writer.write(data)
+    //     writer.close()
+    //     println(s"File creation success!")
+    //     var con: java.sql.Connection = null;
+    //     try {
+    //         var driverName = "org.apache.hive.jdbc.HiveDriver"
+    //         val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
+    //         con = DriverManager.getConnection(conStr, "", "");
+    //         val stmt = con.createStatement();
+    //         stmt.execute("CREATE TABLE IF NOT EXISTS articles(json String)")
+    //         stmt.execute("LOAD DATA LOCAL INPATH '" + fullFileName +"' INTO TABLE articles");
+    //         stmt.executeQuery("SELECT * FROM articles");
+    //     } catch {
+    //         case ex : Throwable=> {
+    //         ex.printStackTrace();
+    //         throw new Exception (s"${ex.getMessage}")
+    //         }
+    //     } finally{
+    //         try {
+    //             if (con != null){
+    //                 con.close()
+    //             }
+    //         } catch {
+    //             case ex : Throwable => {
+    //             ex.printStackTrace();
+    //             throw new Exception (s"${ex.getMessage}")
+    //             } 
+    //         }
+    //     }
+    // }
+
+    // def loadJSONFile2Hive(full_path: String, urlName: String): Unit = {
+    //     val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
+    //     var con = DriverManager.getConnection(conStr, "", "");
+    //     val stmt85 = con.createStatement()
+    //     var sql975 = "DROP TABLE " + HiveDBName + s".$urlName";
+    //     var res65 = stmt85.execute(sql975);
+    //     var con8 = DriverManager.getConnection(conStr, "", "");
+    //     val stmt87 = con8.createStatement()
+    //     var sql976 = "CREATE TABLE IF NOT EXISTS " + HiveDBName + s".$urlName (str String)";
+    //     var res68 = stmt87.execute(sql976);
+    //     clear()
+    //     println(s"Please open another session and transfer $full_path to /user/hive/ via the command:")
+    //     println(s"hdfs dfs -copyFromLocal $full_path /user/hive")
+    //     Thread.sleep(1000)
+    //     println(s"If /user/hive/$full_path alread exists, delete it with:")
+    //     println(s"hdfs dfs -rm /user/hive/$full_path")
+    //     println("When complete, press ENTER")
+    //     scala.io.StdIn.readLine()
+    //     var con2 = DriverManager.getConnection(conStr, "", "");
+    //     val stmt88 = con2.createStatement()
+    //     var sql1678 = s"LOAD DATA INPATH '$full_path' INTO TABLE " + HiveDBName + s".$urlName";
+    //     try {
+    //         var res69 = stmt87.execute(sql1678);
+    //     } catch 
+    //         {
+    //         case e: HiveSQLException => println("File was not found in time. Moving on to next RESTful API")
+    //         case f: SQLException => println("File was moved to /user/hive/warehouse. Successful load.")
+    //     }
+    // }
+
+    def ExecuteQueries(): Unit = {
+        println("Login was successful. Please select from one of the eight options. Options 1-6 pertain to specific analysis questions for EIA data. Option 7 permits the user to provide own HiveSQL query. Option 8 permits user to login as ADMIN and add new users, or make other users ADMIN.")
+        println("Option 1: Find state with the highest and lowest carbon emissions.")
+        println("Option 2: Find states that generate the most hydroelectic power.")
+        println("Option 3: ")
+        println("Option 4: ")
+        println("Option 5: ")
+        println("Option 6: ")
+        println("Option 7: Perform a customer query.")
+        println("Option 8: Create new users (log in as an ADMIN).")
+        println("Option 9: Exit the program.")
+        var response : Int = 0
+        var exit = false
+        while(response != 9 && !exit){
+            var response = scala.io.StdIn.readInt()
+            response match {
+                case 1 => println("Option 1")
+                case 2 => println("Option 1")
+                case 3 => println("Option 1")
+                case 4 => println("Option 1")
+                case 5 => println("Option 1")
+                case 6 => println("Option 1")
+                case 7 => println("Option 1")
+                case 8 => AdminQuery()
+                case 9 => exit = true
+                case _ => println("Please pick a valid option")
+            }
+        }
+        // 
+    }
+
+    def AdminQuery(): Unit = {
+        println("Option 1: Change privileges from BASIC to ADMIN.")
+        println("Option 2: Change another user's privileges from BASIC to ADMIN.")
+        println("Option 3: Add another user with BASIC privileges.")  
+        println("Option 4: Exit")      
+        var response : Int = 0
+        var exit = false
+        while(response != 9 && !exit){
+            var response = scala.io.StdIn.readInt()
+            response match {
+                case 1 => println("Option 1")
+                case 2 => println("Option 2")
+                case 3 => println("Option 3")
+                case 4 => println("Option 4")
+                case _ => println("Please pick a valid option")
+            }
         }
     }
 
