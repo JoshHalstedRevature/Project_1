@@ -354,7 +354,7 @@ object RunApp{
         while(response != 9 && !exit){
             var response = scala.io.StdIn.readInt()
             response match {
-                case 1 => println("Option 1")
+                case 1 => CPIChangeQuery()
                 case 2 => println("Option 1")
                 case 3 => println("Option 1")
                 case 4 => println("Option 1")
@@ -367,6 +367,15 @@ object RunApp{
             }
         }
         // 
+    }
+
+    def CPIChangeQuery(): Unit = {
+        var URL_String = s"http://api.eia.gov/series/$api_key=YOUR_API_KEY_HERE&series_id=STEO.PRIMEUS.A"
+        println(URL_String)
+        println("This query will look at the CPI change between any two years from 1990-2021. Please enter the first year:")
+        var FirstYear = scala.io.StdIn.readInt()
+        println("Please enter the second year:")
+        var SecondYear = scala.io.StdIn.readInt()
     }
 
     def AdminQuery(): Unit = {
