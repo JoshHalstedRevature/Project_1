@@ -13141,3 +13141,109 @@ No more data in the server stdin, exiting...
 [0m2021.12.01 12:07:26 INFO  Shut down connection with build server.[0m
 No more data in the client stdin, exiting...
 No more data in the server stdin, exiting...
+[0m2021.12.01 13:13:30 INFO  Started: Metals version 0.10.9 in workspace 'C:\Users\17577\Git_Files\project_1_files\scala_files' for client Visual Studio Code 1.62.3.[0m
+[0m2021.12.01 13:13:31 INFO  time: initialize in 1.41s[0m
+[0m2021.12.01 13:13:32 INFO  Attempting to connect to the build server...[0m
+[0m2021.12.01 13:13:32 INFO  skipping build import with status 'Installed'[0m
+Dec 01, 2021 1:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 12614'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:12614...
+The server is listening for incoming connections at tcp://127.0.0.1:12614...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.01 13:13:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\17577\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.12.01 13:13:33 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 42448'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:42448...
+The server is listening for incoming connections at tcp://127.0.0.1:42448...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.12.01 13:13:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\17577\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.12.01 13:13:34 INFO  time: Connected to build server in 2.06s[0m
+[0m2021.12.01 13:13:34 INFO  Connected to Build server: Bloop v1.4.11[0m
+[0m2021.12.01 13:13:35 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.01 13:13:35 INFO  time: code lens generation in 3.68s[0m
+[0m2021.12.01 13:13:36 INFO  time: Imported build in 0.11s[0m
+[0m2021.12.01 13:13:37 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.01 13:13:38 INFO  time: code lens generation in 4.36s[0m
+[0m2021.12.01 13:13:38 INFO  time: code lens generation in 6.44s[0m
+[0m2021.12.01 13:13:38 INFO  time: code lens generation in 4.37s[0m
+[0m2021.12.01 13:13:41 INFO  time: indexed workspace in 5.7s[0m
+[0m2021.12.01 13:13:41 INFO  compiling root (2 scala sources)[0m
+[0m2021.12.01 13:13:42 INFO  no build target: using presentation compiler with only scala-library: 2.12.8[0m
+Dec 01, 2021 1:13:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "build/taskFinish",
+  "params": {
+    "taskId": {
+      "id": "1"
+    },
+    "eventTime": 1638393222254,
+    "message": "Compiled \u0027root\u0027",
+    "status": 2,
+    "dataKind": "compile-report",
+    "data": {
+      "target": {
+        "uri": "file:/C:/Users/17577/Git_Files/project_1_files/scala_files/?id\u003droot"
+      },
+      "errors": 1,
+      "warnings": 2,
+      "isNoOp": false,
+      "isLastCycle": true
+    }
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.NullPointerException
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$1(Compilers.scala:227)
+	at scala.meta.internal.metals.Compilers.$anonfun$didCompile$1$adapted(Compilers.scala:227)
+	at scala.Option.foreach(Option.scala:407)
+	at scala.meta.internal.metals.Compilers.didCompile(Compilers.scala:227)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$10(MetalsLanguageServer.scala:407)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$updateWorkspaceDirectory$10$adapted(MetalsLanguageServer.scala:405)
+	at scala.meta.internal.metals.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$2(ForwardingMetalsBuildClient.scala:172)
+	at scala.Option.foreach(Option.scala:407)
+	at scala.meta.internal.metals.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$1(ForwardingMetalsBuildClient.scala:169)
+	at scala.meta.internal.metals.ForwardingMetalsBuildClient.$anonfun$buildTaskFinish$1$adapted(ForwardingMetalsBuildClient.scala:168)
+	at scala.Option.foreach(Option.scala:407)
+	at scala.meta.internal.metals.ForwardingMetalsBuildClient.buildTaskFinish(ForwardingMetalsBuildClient.scala:168)
+	... 16 more
+
+[0m2021.12.01 13:13:44 INFO  compiling root (2 scala sources)[0m
+[0m2021.12.01 13:13:44 INFO  time: compiled root in 0.37s[0m
+[0m2021.12.02 07:29:13 INFO  shutting down Metals[0m
+[0m2021.12.02 07:29:13 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+[0m2021.12.02 07:29:13 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
