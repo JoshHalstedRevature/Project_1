@@ -31,6 +31,7 @@ To-do list:
 * Allow users to upload their own RESTful APIs and make custom queries
 * Provide admin capability to remove a user
 * Write results to CSV file from Hive
+* Create a variable keys array to prevent call limits
 
 ## Getting Started
    
@@ -53,5 +54,5 @@ Once the .jar file is transferred, go back to the maria_dev shell and type in th
 
 ## License
 
-This project uses the following license: [<license_name>](<link>).
+No license was used for this project.
 
