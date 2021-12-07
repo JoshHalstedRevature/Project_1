@@ -1,8 +1,14 @@
-# Energy Information Agency API Query Program
+# US Dollar FOREX API Query Program
 
 ## Project Description
 
-This is a project intended to make calls to the EIA's API to gather data about 
+This is a project intended to make calls to the Currencylayer's API for today's exchanges with respect to the USD. The project also provides the user the capability to make queries to answer six questions:
+*What are the five strongest currencies relative to the USD (today)?"
+*What are the five weakest currencies relative to the USD (today)?"
+*Which currencies are explicitly tied to the USD?"
+*Out of the Central Asian states (exclusing Russia), which currencies are strongest to the USD?"
+*What are the exchange rates for gold (XAU), silver (XAG), and Bitcoin (BTC) today?"
+*For countries in the G8+5 (w/ Switzerland), which currencies are considered strongest today?"
 
 ## Technologies Used
 
@@ -20,6 +26,7 @@ List of features ready:
 
 To-do list:
 * Incorporate encryption for login process
+* Provide users the ability to change their privileges from BASIC to ADMIN
 * Allow users to upload their own RESTful APIs and make custom queries
 
 ## Getting Started
