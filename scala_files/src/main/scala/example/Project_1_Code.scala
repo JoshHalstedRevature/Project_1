@@ -49,14 +49,13 @@ import scala.io.Source
 
 object RunApp{
     // Define global variables 
-    var UserInfoFile = "UserPasswords.txt"
     val HiveDBName = "project_1_db"
     val PasswordTable = "passwordtable"
-
+    val USDCompareTable = "usdcompare"
     def main(args: Array[String]): Unit = {
-        ProvideIntro()
+        //ProvideIntro()
         HiveSetup()
-        ConfirmUsername()
+        //ConfirmUsername()
         ExecuteQueries()
     }
 
@@ -91,19 +90,14 @@ object RunApp{
         // For Hive2:
             var driverName = "org.apache.hive.jdbc.HiveDriver"
             val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
-
             Class.forName(driverName);
-
             con = DriverManager.getConnection(conStr, "", "");
             val stmt = con.createStatement();
             stmt.executeQuery("Show databases");
-            System.out.println("show database successfully");
+            System.out.println("Successful connecting to Hive");
             clear()
         } catch {
-            case ex => {
-                ex.printStackTrace();
-                throw new Exception(s"${ex.getMessage}")
-            }
+            case e: HiveSQLException => println("Could not access Hive. Need to troubleshoot.")
         } finally {
             try {
                 if (con != null)
@@ -243,14 +237,14 @@ object RunApp{
         println(s"Done creating file $filename ...")
     }
 
-    def ReadJSONtoHive(filename: String) {
+    def ReadCSVtoHive(filename: String) {
         var con: java.sql.Connection = null;
         var driverName = "org.apache.hive.jdbc.HiveDriver"
         val conStr = "jdbc:hive2://sandbox-hdp.hortonworks.com:10000/default";
         con = DriverManager.getConnection(conStr, "", "");
         val stmt = con.createStatement();
         try{
-            var resetEverything = ExecuteHiveSQL("DROP TABLE project_1_db.usdcompare")
+            var resetEverything = ExecuteHiveSQL(s"DROP TABLE project_1_db.$USDCompareTable")
         }catch{
             case e: java.sql.SQLException => println("Table does not exist, cannot delete. Continuing...")
         }finally{
@@ -266,7 +260,7 @@ object RunApp{
             clear()
         }
         try{
-            var res2 = ExecuteHiveSQL("CREATE TABLE project_1_db.USDcompare(Currency_Code String, Value Float) ROW FORMAT DELIMITED FIELDS TERMINATED BY ','")
+            var res2 = ExecuteHiveSQL(s"CREATE TABLE project_1_db.$USDCompareTable(Currency_Code String, Value Float) ROW FORMAT DELIMITED FIELDS TERMINATED BY ','")
             clear()
         }catch{
             case e: java.sql.SQLException => println("The table already exists. Continuing...")
@@ -274,7 +268,7 @@ object RunApp{
             clear()
         }
         try{
-            var res9 = ExecuteHiveSQL("LOAD DATA INPATH '/user/maria_dev/tmp.csv' INTO TABLE project_1_db.usdcompare")
+            var res9 = ExecuteHiveSQL(s"LOAD DATA INPATH '/user/maria_dev/tmp.csv' INTO TABLE project_1_db.$USDCompareTable")
             clear()
         }catch{
             case e: java.sql.SQLException => println("The data already exists in the table. Continuing...")
@@ -296,23 +290,23 @@ object RunApp{
         var RemoveBraces = jsonString.stripPrefix("{").stripSuffix("}").trim
         var RemoveCommas = RemoveBraces.replace(',', '\n')
         var AddCommas = RemoveCommas.replace(':', ',')
-        var RemoveDoubleQuotes = AddCommas.replace('\"', ' ')
-        var RemoveWhiteSpace = RemoveDoubleQuotes.replaceAll("\\s", "")
-        scrapAPI2Hive(RemoveWhiteSpace)
+        var RemoveDoubleQuotes = AddCommas.replace("\"U", "U")
+        RemoveDoubleQuotes = RemoveDoubleQuotes.replace("\",", ",")
+        scrapAPI2Hive(RemoveDoubleQuotes)
     }
 
     def scrapAPI2Hive(jsonString: String): Unit = {
         writeToHDFS(jsonString)
-        ReadJSONtoHive("tmp.csv")
+        ReadCSVtoHive("tmp.csv")
     }
 
     def ExecuteQueries(): Unit = {
         USDBaseQuote()
         println("Login was successful.")
-        WelcomeDialogue()
         var response : Int = 0
         var exit = false
         while(response != 9 && !exit){
+            WelcomeDialogue()
             var response = scala.io.StdIn.readInt()
             response match {
                 case 1 => Option1()
@@ -343,7 +337,7 @@ object RunApp{
     def Option1(): Unit = {
         println("Option 1: Find the five strongest currencies relative to the USD (today)")
         try {
-            var res1 = ExecuteHiveSQL("SELECT * FROM project_1_db.usdcompare WHERE (value != null) ORDER BY value DESC LIMIT 5")
+            var res1 = ExecuteHiveSQL(s"SELECT * FROM project_1_db.$USDCompareTable ORDER BY value DESC LIMIT 5")
             while (res1.next) {
                 println(s"${res1.getString("currency_code")}\t${res1.getString("value")}")
             }
@@ -355,7 +349,7 @@ object RunApp{
     def Option2(): Unit = {
         println("Option 2: Find the five weakest currencies relative to the USD (today)")
         try {
-            var res1 = ExecuteHiveSQL("SELECT DISTINCT currency_code, value FROM project_1_db.usdcompare WHERE (value != null) ORDER BY value ASC LIMIT 5")
+            var res1 = ExecuteHiveSQL(s"SELECT * FROM project_1_db.$USDCompareTable WHERE currency_code NOT IN ('USDBTC','USDXAU','USDXAG') ORDER BY value ASC LIMIT 5")
             while (res1.next) {
                 println(s"${res1.getString("currency_code")}\t${res1.getString("value")}")
             }
@@ -367,9 +361,10 @@ object RunApp{
     def Option3(): Unit = {
         println("Option 3: Which currencies are explicitly tied to the USD?")
         try {
-            var res1 = ExecuteHiveSQL("SELECT DISTINCT currency_code FROM project_1_db.usdcompare WHERE (value = 1)")
+            var res1 = ExecuteHiveSQL(s"SELECT currency_code FROM project_1_db.$USDCompareTable WHERE (value = 1) AND NOT (currency_code = 'USDUSD')")
             while (res1.next) {
-                println(s"${res1.getString("currency_code")}\t${res1.getString("value")}")
+                println("These are the currencies tied to the US dollar:")
+                println(s"${res1.getString("currency_code")}")
             }
         }catch{
             case e: java.sql.SQLException => println("Query could not be executed. Please troubleshoot source code.")
@@ -379,7 +374,7 @@ object RunApp{
     def Option4(): Unit = {
         println("Option 4: Out of the Central Asian states (exclusing Russia), which currencies are strongest to the USD?")
         try {
-            var res1 = ExecuteHiveSQL("SELECT * FROM project_1_db.usdcompare WHERE (currency_code = 'USDAFN') OR (currency_code = 'USDAMD') OR (currency_code = 'USDAZN') OR (currency_code = 'USDGEL') OR (currency_code = 'USDKGS') OR (currency_code = 'USDMDL') OR (currency_code = 'USDMKD') OR (currency_code = 'USDMNT') OR (currency_code = 'USDTJS') OR (currency_code = 'USDTMT') OR (currency_code = 'USDUZS') ORDER BY value DESC")
+            var res1 = ExecuteHiveSQL(s"SELECT * FROM project_1_db.$USDCompareTable WHERE (currency_code = 'USDAFN') OR (currency_code = 'USDAMD') OR (currency_code = 'USDAZN') OR (currency_code = 'USDGEL') OR (currency_code = 'USDKGS') OR (currency_code = 'USDMDL') OR (currency_code = 'USDMKD') OR (currency_code = 'USDMNT') OR (currency_code = 'USDTJS') OR (currency_code = 'USDTMT') OR (currency_code = 'USDUZS') ORDER BY value ASC")
             while (res1.next) {
                 println(s"${res1.getString("currency_code")}\t${res1.getString("value")}")
             }
@@ -391,7 +386,7 @@ object RunApp{
     def Option5(): Unit = {
         println("Option 5: What are the exchange rates for gold (XAU), silver (XAG), and Bitcoin (BTC) today?")
         try {
-            var res1 = ExecuteHiveSQL("SELECT * FROM project_1_db.usdcompare WHERE (currency_code = 'USDXAU') OR (currency_code = 'USDXAG') OR (currency_code = 'USDBTC') ORDER BY value DESC")
+            var res1 = ExecuteHiveSQL(s"SELECT * FROM project_1_db.$USDCompareTable WHERE (currency_code = 'USDXAU') OR (currency_code = 'USDXAG') OR (currency_code = 'USDBTC') ORDER BY value ASC")
             while (res1.next) {
                 println(s"${res1.getString("currency_code")}\t${res1.getString("value")}")
             }
@@ -403,7 +398,7 @@ object RunApp{
     def Option6(): Unit = {
         println("Option 6: For countries in the G8+5 (w/ Switzerland), which currencies are considered strongest today?")
         try {
-            var res1 = ExecuteHiveSQL("SELECT * FROM project_1_db.usdcompare WHERE (currency_code = 'USDGBP') OR (currency_code = 'USDCAD') OR (currency_code = 'USDEUR') OR (currency_code = 'USDCHF') OR (currency_code = 'USDJPY') OR (currency_code = 'USDCNY') OR (currency_code = 'USDZAR') OR (currency_code = 'USDRUB') OR (currency_code = 'USDINR') OR (currency_code = 'USDMXN') OR (currency_code = 'USDBRL') ORDER BY value DESC")
+            var res1 = ExecuteHiveSQL(s"SELECT * FROM project_1_db.$USDCompareTable WHERE (currency_code = 'USDGBP') OR (currency_code = 'USDCAD') OR (currency_code = 'USDEUR') OR (currency_code = 'USDCHF') OR (currency_code = 'USDJPY') OR (currency_code = 'USDCNY') OR (currency_code = 'USDZAR') OR (currency_code = 'USDRUB') OR (currency_code = 'USDINR') OR (currency_code = 'USDMXN') OR (currency_code = 'USDBRL') ORDER BY value ASC")
             while (res1.next) {
                 println(s"${res1.getString("currency_code")}\t${res1.getString("value")}")
             }
@@ -412,17 +407,16 @@ object RunApp{
         }
     }
 
-    def AdminQuery(): Unit = {
-        println("Option 1: Add another user with BASIC privileges.")  
-        println("Option 2: Exit")      
+    def AdminQuery(): Unit = {    
         var response : Int = 0
-        var exit = false
-        while(response != 3 && !exit){
+        var AdminExit = false
+        while(response != 2 && !AdminExit){
+            println("Option 1: Add another user.")  
+            println("Option 2: Exit") 
             var response = scala.io.StdIn.readInt()
             response match {
-                case 1 => println("Option 1")
-                case 2 => println("Option 2")
-                case 3 => println("Option 3")
+                case 1 => GrantAdminRights()
+                case 2 => AdminExit = true
                 case _ => println("Please pick a valid option")
             }
         }
@@ -436,13 +430,17 @@ object RunApp{
             var password = scala.io.StdIn.readLine()
             println("Should they have ADMIN rights? y or n")
             var AdminRights = scala.io.StdIn.readLine()
-            var stmt = s"INSERT INTO table Project_1_DB.PasswordTable values('$username', '$password', 'BASIC');"
-            if(AdminRights=='y'){
-                stmt = s"INSERT INTO table Project_1_DB.PasswordTable values('$username', '$password', 'ADMIN');"
-            }
-            var res1 = ExecuteHiveSQL(stmt)       
+            try{
+                var stmt = s"INSERT INTO table Project_1_DB.PasswordTable values('$username', '$password', 'BASIC')"
+                if(AdminRights=='y'){
+                    stmt = s"INSERT INTO table Project_1_DB.PasswordTable values('$username', '$password', 'ADMIN')"
+                }
+                var res1 = ExecuteHiveSQL(stmt)           
+            }catch{
+                case e: java.sql.SQLException => println("Query could not be executed. Please troubleshoot source code.")
+            }      
         }
-        println("Are you an administrator?")
+        println("Are you an administrator? Yes or No")
         val AdminFlag = scala.io.StdIn.readLine()
         if(AdminFlag == "Yes") {
             println("Provide administrative password:")
