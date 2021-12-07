@@ -18,7 +18,10 @@ lazy val root = (project in file("."))
     libraryDependencies += "org.apache.hive" % "hive-jdbc" % "2.3.5",
     libraryDependencies += "io.github.zamblauskas" %% "scala-csv-parser" % "0.13.1",
     libraryDependencies += "com.lihaoyi" %% "upickle" % "0.9.5",
-    libraryDependencies += "com.lihaoyi" %% "os-lib" % "0.7.8"
+    libraryDependencies += "com.lihaoyi" %% "os-lib" % "0.7.8",
+    libraryDependencies += "org.apache.spark" %% "spark-core" % "2.4.3",
+    libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.3",
+    libraryDependencies += "com.typesafe.play" %% "play-json" % "2.7.0"
   )
 
 // Uncomment the following for publishing to Sonatype.

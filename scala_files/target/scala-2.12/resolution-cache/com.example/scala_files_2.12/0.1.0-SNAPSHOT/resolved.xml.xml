@@ -4,7 +4,7 @@
 		module="scala_files_2.12"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20211107152630"
+		publication="20211206183724"
 	>
 		<description>
 		Scala_Files
@@ -43,5 +43,8 @@
 		<dependency org="io.github.zamblauskas" name="scala-csv-parser_2.12" rev="0.13.1" conf="compile->default(compile)"/>
 		<dependency org="com.lihaoyi" name="upickle_2.12" rev="0.9.5" conf="compile->default(compile)"/>
 		<dependency org="com.lihaoyi" name="os-lib_2.12" rev="0.7.8" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-core_2.12" rev="2.4.3" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-sql_2.12" rev="2.4.3" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-json_2.12" rev="2.7.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

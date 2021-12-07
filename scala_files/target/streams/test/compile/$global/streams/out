@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\17577\Git_Files\project_1_files\scala_files\src\test\scala\example\New.scala:37:33: '<-' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\17577\Git_Files\Project_1\scala_files\src\test\scala\example\New.scala:37:33: '<-' expected but '}' found.[0m
 [0m[[0m[31merror[0m] [0m[0m            j < - 1 to dimension}{[0m
 [0m[[0m[31merror[0m] [0m[0m                                ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
