@@ -4,12 +4,12 @@
 
 This is a project intended to make calls to the Currencylayer's API for today's exchanges with respect to the USD. The project also provides the user the capability to make queries to answer six questions:
 
-* What are the five strongest currencies relative to the USD (today)?"
-* What are the five weakest currencies relative to the USD (today)?"
-* Which currencies are explicitly tied to the USD?"
-* Out of the Central Asian states (exclusing Russia), which currencies are strongest to the USD?"
-* What are the exchange rates for gold (XAU), silver (XAG), and Bitcoin (BTC) today?"
-* For countries in the G8+5 (w/ Switzerland), which currencies are considered strongest today?"
+* What are the five strongest currencies relative to the USD (today)?
+* What are the five weakest currencies relative to the USD (today)?
+* Which currencies are explicitly tied to the USD?
+* Out of the Central Asian states (exclusing Russia), which currencies are strongest to the USD?
+* What are the exchange rates for gold (XAU), silver (XAG), and Bitcoin (BTC) today?
+* For countries in the G8+5 (w/ Switzerland), which currencies are considered strongest today?
 
 ## Technologies Used
 
